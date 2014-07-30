@@ -10,6 +10,18 @@ module.exports = function(grunt) {
                 src: 'src/*',
                 dest: 'build/*'
             }
+        },
+        jasmine: {
+            components: {
+                src: [
+                    'components/*js'
+                ],
+                options: {
+                    specs: 'tests/spec/*Spec.js',
+                    keepRunner: true
+                    //helpers: 'test/spec/*.js'
+                }
+            }
         }
     });
 
@@ -18,5 +30,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('travis', ['jshint','jasmine']);
 
 };

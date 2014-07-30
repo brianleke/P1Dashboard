@@ -8,6 +8,7 @@ env:
   - ARTIFACTS_S3_BUCKET=P1Dashboard
 
 install:
+   - npm install grunt
    - npm install
 
 script: grunt

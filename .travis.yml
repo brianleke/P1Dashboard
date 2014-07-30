@@ -12,5 +12,6 @@ install:
 
 before_script:
    - npm install -g grunt-cli
+   - npm install grunt-contrib-jasmine
 
 script: grunt travis
